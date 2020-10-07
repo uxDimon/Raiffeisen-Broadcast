@@ -2,9 +2,9 @@ var directionScroll = [];
 $(document).on('scroll', function (e) {
   directionScroll.push($(document).scrollTop());
   if ($(window).scrollTop() < 50) {
-    $(document).find('.banner__top, .timetable').removeClass('active');
+    $(document).find('.banner__top').removeClass('active');
   } else {
-    $(document).find('.banner__top, .timetable').addClass('active');
+    $(document).find('.banner__top').addClass('active');
   }
 });
 
@@ -14,4 +14,9 @@ window.onbeforeunload = function () {
 
 $(window).on('load', function () {
   $('body').addClass('visible');
+  if ($(window).scrollTop() < 50) {
+    $(document).find('.header').removeClass('visible');
+  } else {
+    $(document).find('.header').addClass('visible');
+  }
 });
