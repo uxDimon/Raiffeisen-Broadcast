@@ -20,3 +20,11 @@ $(window).on('load', function () {
     $(document).find('.header').addClass('visible');
   }
 });
+
+$(document).on('click', '.banner__scroll', function () {
+  let height = $(window).height() - $('.banner__top').outerHeight();
+  $('html, body').animate({
+    scrollTop: height
+  }, 500);
+});
+
