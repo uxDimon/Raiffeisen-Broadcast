@@ -1,0 +1,30 @@
+@import 'common/normalize';
+@import 'common/adaptive';
+
+
+html,
+body{
+	display: block;
+  font-family: 'ALSHauss';
+  color: #fff;
+  background: #000;
+  line-height: 1;
+  overflow-x: hidden;
+}
+
+body{
+  transition: opacity .8s ease-in-out .6s;
+  opacity: 0;
+  &.visible{
+    opacity: 1;
+  }
+}
+
+::selection{
+  background-color: rgba(254,230,0,0.99);
+}
+
+
+@import 'common/fonts';
+@import 'pages/index';
+
