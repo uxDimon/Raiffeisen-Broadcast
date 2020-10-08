@@ -26,6 +26,11 @@ block content
         <path d="M15.9823 3.86875V0.564178H19.4463V3.86875H15.9823ZM16.0897 20.1498V6.66286H19.3389V20.1498H16.0897Z" fill="white"/>
         <path d="M50.2703 27.8567V24.5521H53.7342V27.8567H50.2703ZM50.3777 44.1377V30.6508H53.6268V44.1377H50.3777Z" fill="white"/>
       </svg>
+      a.banner-top__btn(href="#") 
+        <svg width="68" height="68" viewBox="0 0 68 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="34" cy="34" r="34" fill="#FEE600"/>
+          <path d="M46 30.5359C48.6667 32.0755 48.6667 35.9245 46 37.4641L29.5 46.9904C26.8333 48.53 23.5 46.6055 23.5 43.5263V24.4737C23.5 21.3945 26.8333 19.47 29.5 21.0096L46 30.5359Z" fill="#2B2D33"/>
+        </svg>
       a.banner__btn(href="#") Зарегистрироваться
     a.banner__link(href="#")
     .banner__play 
@@ -46,25 +51,15 @@ block content
         .timetable-item__col
         .timetable-item__col Cейчас идет
         .timetable-item__col
-      .timetable__item.timetable-item
-        .timetable-item__col 12:00
-        .timetable-item__col
-          .timetable-item__title Как перейти в продукт мечты и не заскучать
-          .timetable-item__text Райффайзенбанк
-        .timetable-item__col
-          .timetable-item__speaker Юрий Ветров
-          .timetable-item__speaker Юрий Ветров
-          .timetable-item__speaker Николай Иванов
-          .timetable-item__speaker Николай Иванов
-          .timetable-item__speaker Кирилл Айдентиков
+      
 
   .timetable
     .timetable__item.timetable-item
       .timetable-item__col
       .timetable-item__col Расписание
       .timetable-item__col
-    .timetable__item.timetable-item
-      .timetable-item__col 12:00
+    .timetable__item.timetable-item(data-starttime="October 8, 2020 11:00:00" data-endtime="October 8, 2020 12:00:00")
+      .timetable-item__col 11:00
       .timetable-item__col
         .timetable-item__title Как перейти в продукт мечты и не заскучать
         .timetable-item__text Райффайзенбанк
@@ -74,8 +69,8 @@ block content
         .timetable-item__speaker Николай Иванов
         .timetable-item__speaker Николай Иванов
         .timetable-item__speaker Кирилл Айдентиков
-    .timetable__item.timetable-item
-      .timetable-item__col 13:00
+    .timetable__item.timetable-item(data-starttime="October 8, 2020 12:00:00" data-endtime="October 8, 2020 13:00:00")
+      .timetable-item__col 12:00
       .timetable-item__col
         .timetable-item__title Как выбирать  сочные бургеры
         .timetable-item__text Revolut
@@ -84,16 +79,16 @@ block content
         .timetable-item__speaker Юрий Ветров
         .timetable-item__speaker Николай Иванов
         .timetable-item__speaker Николай Иванов
-    .timetable__item.timetable-item.active
-      .timetable-item__col 14:00
+    .timetable__item.timetable-item(data-starttime="October 8, 2020 13:00:00" data-endtime="October 8, 2020 14:00:00")
+      .timetable-item__col 13:00
       .timetable-item__col
         .timetable-item__title Как перейти в продукт мечты и не заскучать
         .timetable-item__text N26
       .timetable-item__col
         .timetable-item__speaker Юрий Ветров
         .timetable-item__speaker Юрий Ветров
-    .timetable__item.timetable-item
-      .timetable-item__col 15:00
+    .timetable__item.timetable-item(data-starttime="October 8, 2020 14:00:00" data-endtime="October 8, 2020 15:00:00")
+      .timetable-item__col 14:00
       .timetable-item__col
         .timetable-item__title N26
         .timetable-item__text Как перейти в продукт мечты и не заскучать
@@ -105,16 +100,16 @@ block content
       source(srcset="assets/images/coffeebreake-tablet.png" media="(max-width: 1024px)")
       source(srcset="assets/images/coffeebreake.png 1x, assets/images/coffeebreake@2x.png 2x")
       img(src="assets/images/coffeebreake.png", alt="coffeebreake")
-    .timetable__item.timetable-item
-      .timetable-item__col 18:00
+    .timetable__item.timetable-item(data-starttime="October 8, 2020 15:00:00" data-endtime="October 8, 2020 16:20:00")
+      .timetable-item__col 15:00
       .timetable-item__col
         .timetable-item__title N26
         .timetable-item__text Как перейти в продукт мечты и не заскучать
       .timetable-item__col
         .timetable-item__speaker Юрий Ветров
         .timetable-item__speaker Юрий Ветров
-    .timetable__item.timetable-item
-      .timetable-item__col 19:00
+    .timetable__item.timetable-item(data-starttime="October 8, 2020 16:20:00" data-endtime="October 8, 2020 17:20:00")
+      .timetable-item__col 16:20
       .timetable-item__col
         .timetable-item__title N26
         .timetable-item__text Как перейти в продукт мечты и не заскучать

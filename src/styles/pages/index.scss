@@ -32,6 +32,14 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
   }
+  &-top__btn{
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
   &__btn{
     font-family: 'ALSHauss';
     background: rgba(255, 255, 255, 0.2);

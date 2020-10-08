@@ -6,6 +6,12 @@ $(document).on('scroll', function (e) {
   } else {
     $(document).find('.banner__top').addClass('active');
   }
+
+  if ($(window).scrollTop() > ($(window).height() / 2)) {
+    $('.banner-top__btn').fadeIn();
+  } else {
+    $('.banner-top__btn').fadeOut();
+  }
 });
 
 window.onbeforeunload = function () {
@@ -18,6 +24,22 @@ $(window).on('load', function () {
     $(document).find('.header').removeClass('visible');
   } else {
     $(document).find('.header').addClass('visible');
+  }
+
+  $(document).find('.timetable__item[data-starttime]').each(function (index) {
+    let starttime = Date.parse($(this).attr('data-starttime'));
+    let endtime = Date.parse($(this).attr('data-endtime'));
+    if (starttime < Date.now() && Date.now() < endtime) {
+      console.log($(this));
+      let cloneItem = $(this).clone();
+      $('.banner__current').append(cloneItem);
+    }
+  });
+
+  if ($(window).scrollTop() > ($(window).height() / 2)) {
+    $('.banner-top__btn').fadeIn();
+  } else {
+    $('.banner-top__btn').fadeOut();
   }
 });
 
