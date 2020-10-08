@@ -31,6 +31,14 @@
       background: #000;
       border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     }
+    @include w480{
+      padding: 20px 24px;
+    }
+  }
+  &__svg{
+    @include w480{
+      width: 74px;
+    }
   }
   &-top__btn{
     border-radius: 50%;
@@ -39,6 +47,16 @@
     top: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    svg{
+      @include w768{
+        width: 66px;
+        height: 66px;
+      }
+      @include w480{
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
   &__btn{
     font-family: 'ALSHauss';
@@ -49,6 +67,21 @@
     align-items: center;
     justify-content: center;
     font-weight: 500;
+    @include w768{
+      font-size: 0;
+      padding: 0;
+      width: 68px;
+      height: 68px;
+      background-color: rgba(255, 255, 255, 0.2);
+      background-image: url('../images/btn.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @include w480{
+      width: 52px;
+      height: 52px;
+      background-size: 20px;
+    }
   }
   &__link{
     position: absolute;
@@ -71,6 +104,22 @@
       margin-bottom: 30px;
       font-size: 36px;
       line-height: 44px;
+      @include w768{
+        margin-bottom: 10px;
+        font-size: 28px;
+      }
+      @include w480{
+        font-size: 20px;
+        line-height: 24px;
+        white-space: nowrap;
+        margin-bottom: 20px;
+      }
+    }
+    svg{
+      @include w1024{
+        width: 100px;
+        height: 100px;
+      }
     }
   }
   &__scroll{
@@ -81,6 +130,15 @@
     transform: translateX(-50%);
     cursor: pointer;
     border-radius: 50%;
+    @include w1024{
+      bottom: 20px;
+    }
+    svg{
+      @include w1024{
+        width: 40px;
+        height: 40px;
+      }
+    }
   }
   &__current{
     position: fixed;
@@ -92,6 +150,14 @@
     .timetable-item__col:first-child,
     .timetable-item__title{
       color: #fff;
+    }
+    @include w480{
+      padding: 0 24px;
+    }
+    .timetable-item__speaker{
+      @include w480{
+        display: none;
+      }
     }
   }
 }
@@ -164,7 +230,7 @@
     }
     &__col{
       &:first-child{
-        flex: 0 0 17%;
+        flex: 0 0 310px;
         font-weight: 300;
         font-size: 96px;
         line-height: 96px;
@@ -217,6 +283,7 @@
         font-size: 28px;
       }
       @include w480{
+        padding-right: 60px;
         font-size: 23px;
       }
     }

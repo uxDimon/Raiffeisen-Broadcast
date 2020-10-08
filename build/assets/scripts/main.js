@@ -30,8 +30,8 @@ $(window).on('load', function () {
     let starttime = Date.parse($(this).attr('data-starttime'));
     let endtime = Date.parse($(this).attr('data-endtime'));
     if (starttime < Date.now() && Date.now() < endtime) {
-      console.log($(this));
       let cloneItem = $(this).clone();
+      $(this).addClass('active');
       $('.banner__current').append(cloneItem);
     }
   });
