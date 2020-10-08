@@ -41,6 +41,8 @@ $(window).on('load', function () {
   } else {
     $('.banner-top__btn').fadeOut();
   }
+
+  $('.banner__play').css('top', ($(window).height() / 2));
 });
 
 $(document).on('click', '.banner__scroll', function () {
@@ -49,4 +51,3 @@ $(document).on('click', '.banner__scroll', function () {
     scrollTop: height
   }, 500);
 });
-
