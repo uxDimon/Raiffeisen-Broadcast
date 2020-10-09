@@ -12,6 +12,14 @@ $(document).on('scroll', function (e) {
   } else {
     $('.banner-top__btn').fadeOut();
   }
+
+  if ($(window).scrollTop() > ($(window).height())) {
+    $('.overlay').show();
+    $('.timetable').addClass('active');
+  } else {
+    $('.overlay').hide();
+    $('.timetable').removeClass('active');
+  }
 });
 
 window.onbeforeunload = function () {
@@ -51,3 +59,5 @@ $(document).on('click', '.banner__scroll', function () {
     scrollTop: height
   }, 500);
 });
+
+

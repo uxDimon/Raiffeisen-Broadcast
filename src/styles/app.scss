@@ -2,16 +2,6 @@
 @import 'common/adaptive';
 
 
-@supports (-webkit-touch-callout: none) {
-  html{
-
-  }
-  body{
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-
 html,
 body{
   display: block;
