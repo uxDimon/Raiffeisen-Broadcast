@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="assets/images/apple-touch-icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="assets/styles/app.min.css">
+    <script src="assets/scripts/jquery.js"></script>
+    <script src="assets/scripts/main.js"></script>
   </head>
   <body>
     <div class="banner">
@@ -62,7 +64,30 @@
     </div>
     <div class="overlay"></div>
     <div class="main-content">
-      <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/XBPjVzSoepo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+      <div class="video">
+        <div id="player"></div>
+        <script>
+          var tag = document.createElement('script');
+          
+          tag.src = "https://www.youtube.com/iframe_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          
+          var player;
+          function onYouTubeIframeAPIReady() {
+            player = new YT.Player('player', {
+              height: '360',
+              width: '640',
+              videoId: 'XBPjVzSoepo',
+            });
+          }
+          
+          $(document).on('click', '.banner__play svg, .banner-top__btn', function (e) {
+            player.playVideo();
+          });
+          
+        </script>
+      </div>
       <div class="timetable">
         <div class="timetable__item timetable-item">
           <div class="timetable-item__col"></div>
@@ -197,7 +222,5 @@
         </div>
       </div>
     </div>
-    <script src="assets/scripts/jquery.js"></script>
-    <script src="assets/scripts/main.js"></script>
   </body>
 </html>

@@ -371,7 +371,14 @@ html.active{
   }
   .timetable{
     flex: 1;
+    padding: 0;
+    &__item{
+      &:first-child{
+        padding: 0 40px;
+      }
+    }
     &-item{
+      padding: 40px;
       &__col{
         &:first-child{
           flex: 0 0 18%;

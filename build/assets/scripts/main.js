@@ -60,6 +60,8 @@ $(document).on('click', '.banner__scroll', function () {
   }, 500);
 });
 
-$(document).on('click', '.banner__play svg, .banner-top__btn', function () {
+$(document).on('click', '.banner__play svg, .banner-top__btn', function (e) {
+  e.preventDefault();
+  $('html, body').scrollTop(0);
   $('html').addClass('active');
 });

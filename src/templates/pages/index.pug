@@ -56,7 +56,27 @@ block content
 
   .main-content
     .video
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/XBPjVzSoepo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      #player
+
+      script.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        var player;
+        function onYouTubeIframeAPIReady() {
+          player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: 'XBPjVzSoepo',
+          });
+        }
+        
+        $(document).on('click', '.banner__play svg, .banner-top__btn', function (e) {
+          player.playVideo();
+        });
 
     .timetable
       .timetable__item.timetable-item
