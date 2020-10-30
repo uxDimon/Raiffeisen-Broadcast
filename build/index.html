@@ -2,11 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Главная</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>Fintech Design Conf</title><meta content="Конференция Fintech Design Conf 2020 пройдет 12 ноября в онлайне. Дизайн-команды современных банков покажут, что интересного происходит в отрасли и расскажут, куда движется индустрия." name="description">
+<meta content="дизайн, конференция, финтех, design, conference, fintech, UX, product design, продуктовый дизайн" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta content="ie=edge" http-equiv="x-ua-compatible"><meta property="og:title" content=" Fintech Design Conf 2020">
+<meta property="og:description" content="Конференция Fintech Design Conf 2020 пройдет 12 ноября в онлайне. Дизайн-команды современных банков покажут, что интересного происходит в отрасли и расскажут, куда движется индустрия.">
+<meta property="og:image" content="assets/images/OG.png">
+<meta name="cmsmagazine" content="5030b50dd17858824f3ab635603e59bc">
     <link rel="shortcut icon" href="assets/images/apple-touch-icon.png" type="image/x-icon">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
     <link rel="stylesheet" type="text/css" href="assets/styles/app.min.css">
@@ -68,11 +70,9 @@
         <div id="player"></div>
         <script>
           var tag = document.createElement('script');
-          
           tag.src = "https://www.youtube.com/iframe_api";
           var firstScriptTag = document.getElementsByTagName('script')[0];
           firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-          
           var player;
           function onYouTubeIframeAPIReady() {
             player = new YT.Player('player', {
@@ -81,11 +81,9 @@
               videoId: 'XBPjVzSoepo',
             });
           }
-          
           $(document).on('click', '.banner__play svg, .banner-top__btn', function (e) {
             player.playVideo();
           });
-          
         </script>
       </div>
       <div class="timetable">
@@ -213,14 +211,13 @@
           </div>
           <div class="timetable-item__col"></div>
         </div>
-        <div class="timetable__item timetable-item" data-starttime="November 12, 2020 20:30:00" data-endtime="November 12, 2020 23:59:59">
-          <div class="timetable-item__col">20:30</div>
-          <div class="timetable-item__col">
-            <div class="timetable-item__title">Афтепати</div>
-          </div>
-          <div class="timetable-item__col"></div>
-        </div>
       </div>
-    </div>
+    </div><script async src="https://www.googletagmanager.com/gtag/js?id=UA-175475949-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-175475949-2');
+    </script>
   </body>
 </html>
