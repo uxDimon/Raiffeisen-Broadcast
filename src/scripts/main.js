@@ -60,4 +60,6 @@ $(document).on('click', '.banner__scroll', function () {
   }, 500);
 });
 
-
+$(document).on('click', '.banner__play svg, .banner-top__btn', function () {
+  $('html').addClass('active');
+});

@@ -32,7 +32,7 @@ block content
           <path d="M46 30.5359C48.6667 32.0755 48.6667 35.9245 46 37.4641L29.5 46.9904C26.8333 48.53 23.5 46.6055 23.5 43.5263V24.4737C23.5 21.3945 26.8333 19.47 29.5 21.0096L46 30.5359Z" fill="#2B2D33"/>
         </svg>
       a.banner__btn(href="#") Зарегистрироваться
-    a.banner__link(href="#")
+    .banner__link
     .banner__play 
       span Смотреть трансляцию
       <svg width="154" height="154" viewBox="0 0 154 154" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,66 +54,107 @@ block content
 
   .overlay
 
-  .timetable
-    .timetable__item.timetable-item
-      .timetable-item__col
-      .timetable-item__col Расписание
-      .timetable-item__col
-    .timetable__item.timetable-item(data-starttime="October 9, 2020 10:00:00" data-endtime="October 9, 2020 12:00:00")
-      .timetable-item__col 10:00
-      .timetable-item__col
-        .timetable-item__title Как перейти в продукт мечты и не заскучать
-        .timetable-item__text Райффайзенбанк
-      .timetable-item__col
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Николай Иванов
-        .timetable-item__speaker Николай Иванов
-        .timetable-item__speaker Кирилл Айдентиков
-    .timetable__item.timetable-item(data-starttime="October 9, 2020 12:00:00" data-endtime="October 9, 2020 13:00:00")
-      .timetable-item__col 12:00
-      .timetable-item__col
-        .timetable-item__title Как выбирать  сочные бургеры
-        .timetable-item__text Revolut
-      .timetable-item__col
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Николай Иванов
-        .timetable-item__speaker Николай Иванов
-    .timetable__item.timetable-item(data-starttime="October 9, 2020 13:00:00" data-endtime="October 9, 2020 14:00:00")
-      .timetable-item__col 13:00
-      .timetable-item__col
-        .timetable-item__title Как перейти в продукт мечты и не заскучать
-        .timetable-item__text N26
-      .timetable-item__col
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Юрий Ветров
-    .timetable__item.timetable-item(data-starttime="October 9, 2020 14:00:00" data-endtime="October 9, 2020 15:00:00")
-      .timetable-item__col 14:00
-      .timetable-item__col
-        .timetable-item__title N26
-        .timetable-item__text Как перейти в продукт мечты и не заскучать
-      .timetable-item__col
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Юрий Ветров
-    picture
-      source(srcset="assets/images/coffeebreake.png 1x, assets/images/coffeebreake@2x.png 2x")
-      img(src="assets/images/coffeebreake.png", alt="coffeebreake")
-    .timetable__item.timetable-item(data-starttime="October 9, 2020 15:00:00" data-endtime="October 9, 2020 16:00:00")
-      .timetable-item__col 15:00
-      .timetable-item__col
-        .timetable-item__title N26
-        .timetable-item__text Как перейти в продукт мечты и не заскучать
-      .timetable-item__col
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Юрий Ветров
-    .timetable__item.timetable-item(data-starttime="October 9, 2020 18:00:00" data-endtime="October 9, 2020 19:00:00")
-      .timetable-item__col 16:00
-      .timetable-item__col
-        .timetable-item__title N26
-        .timetable-item__text Как перейти в продукт мечты и не заскучать
-      .timetable-item__col
-        .timetable-item__speaker Юрий Ветров
-        .timetable-item__speaker Юрий Ветров
+  .main-content
+    .video
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/XBPjVzSoepo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    .timetable
+      .timetable__item.timetable-item
+        .timetable-item__col
+        .timetable-item__col Расписание
+        .timetable-item__col
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 11:00:00" data-endtime="November 12, 2020 11:10:00")
+        .timetable-item__col 11:00
+        .timetable-item__col
+          .timetable-item__title Kick-Off
+        .timetable-item__col
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 11:10:00" data-endtime="November 12, 2020 12:00:00")
+        .timetable-item__col 11:10
+        .timetable-item__col
+          .timetable-item__title Райффайзенбанк
+        .timetable-item__col
+          .timetable-item__speaker Юрий Ветров
+          .timetable-item__speaker Елена Куликова
+          .timetable-item__speaker Марина Гореликова
+          .timetable-item__speaker Вика Дубровская
+          .timetable-item__speaker Дима Мясников
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 12:00:00" data-endtime="November 12, 2020 12:50:00")
+        .timetable-item__col 12:00
+        .timetable-item__col
+          .timetable-item__title Тинькофф Инвестиции
+        .timetable-item__col
+          .timetable-item__speaker Екатерина Гревцева
+          .timetable-item__speaker Анна Борц
+          .timetable-item__speaker Владимир Погорелов
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 12:50:00" data-endtime="November 12, 2020 13:40:00")
+        .timetable-item__col 12:50
+        .timetable-item__col
+          .timetable-item__title Home Credit Bank
+        .timetable-item__col
+          .timetable-item__speaker Владислав Ковалёв
+          .timetable-item__speaker Светлана Дроздова
+          .timetable-item__speaker Максим Дёмин
+          .timetable-item__speaker Егор Кочерыгин
+          .timetable-item__speaker Богдан Садовин
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 13:40:00" data-endtime="November 12, 2020 14:30:00")
+        .timetable-item__col 13:40
+        .timetable-item__col
+          .timetable-item__title Сбер + AIC
+        .timetable-item__col
+          .timetable-item__speaker Валерия Курмак
+          .timetable-item__speaker Евгений Кузнецов
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 14:50:00" data-endtime="November 12, 2020 15:20:00")
+        .timetable-item__col 14:30
+        .timetable-item__col
+          .timetable-item__title Открытие Брокер
+        .timetable-item__col
+          .timetable-item__speaker Иван Прохоров
+          .timetable-item__speaker Наиль Аксянов
+          .timetable-item__speaker Алексей Примечаев
+          .timetable-item__speaker Максим Власкин
+          .timetable-item__speaker Наталия Москательникова
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 15:20:00" data-endtime="November 12, 2020 16:20:00")
+        .timetable-item__col 15:20
+        .timetable-item__col
+          .timetable-item__title N26
+        .timetable-item__col
+          .timetable-item__speaker Emanuel Milicevic
+          .timetable-item__speaker Martina Transtroem
+          .timetable-item__speaker Maja Tisel
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 16:20:00" data-endtime="November 12, 2020 17:10:00")
+        .timetable-item__col 16:20
+        .timetable-item__col
+          .timetable-item__title Контур
+        .timetable-item__col
+          .timetable-item__speaker Лена Махно
+          .timetable-item__speaker Эмилия Городовых
+          .timetable-item__speaker Лена Гергерт
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 17:10:00" data-endtime="November 12, 2020 18:00:00")
+        .timetable-item__col 17:10
+        .timetable-item__col
+          .timetable-item__title Альфа-Банк
+        .timetable-item__col
+          .timetable-item__speaker Волошина Ирина
+          .timetable-item__speaker Шитов Виталий
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 18:00:00" data-endtime="November 12, 2020 18:45:00")
+        .timetable-item__col 18:00
+        .timetable-item__col
+          .timetable-item__title БКС + AIC
+        .timetable-item__col
+          .timetable-item__speaker Кирилл Глоба
+          .timetable-item__speaker Артур Байчурин
+          .timetable-item__speaker Александр Головин
+          .timetable-item__speaker Степан Агеев
+          .timetable-item__speaker Софья Коростелева
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 18:45:00" data-endtime="November 12, 2020 19:00:00")
+        .timetable-item__col 18:45
+        .timetable-item__col
+          .timetable-item__title Закрытие
+        .timetable-item__col
+      .timetable__item.timetable-item(data-starttime="November 12, 2020 20:30:00" data-endtime="November 12, 2020 23:59:59")
+        .timetable-item__col 20:30
+        .timetable-item__col
+          .timetable-item__title Афтепати
+        .timetable-item__col
 
 
