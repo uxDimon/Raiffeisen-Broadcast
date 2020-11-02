@@ -40,6 +40,7 @@ $(window).on('load', function () {
     if (starttime < Date.now() && Date.now() < endtime) {
       let cloneItem = $(this).clone();
       $(this).addClass('active');
+      $('.banner__current').addClass('active');
       $('.banner__current').append(cloneItem);
     }
   });
