@@ -51,6 +51,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    cursor: pointer;
     svg{
       @include w768{
         width: 66px;
