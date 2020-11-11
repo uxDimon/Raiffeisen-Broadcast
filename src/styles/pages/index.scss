@@ -453,6 +453,48 @@ html.active {
 	}
 }
 
+.banner__top-login {
+	position: fixed;
+	align-items: center;
+	top: 28px;
+	right: 40px;
+	display: none;
+	z-index: 10;
+}
+
+.banner__text {
+	margin: 0;
+	max-width: 375px;
+	opacity: 0.5;
+	margin-right: 120px;
+	font-size: 16px;
+	line-height: 1.37;
+}
+
+html.active .banner__top-login {
+	display: flex;
+}
+
+.banner__btn {
+	flex-shrink: 0;
+}
+
+@media screen and (max-width: 767px) {
+	.banner__top-login_head {
+		display: none;
+	}
+	.banner__top-login {
+		position: static;
+		width: 100%;
+		justify-content: space-between;
+		margin-top: 15px;
+		margin-bottom: 36px;
+	}
+	.banner__text {
+		margin-right: 20px;
+	}
+}
+
 .slide__items {
 	position: fixed;
 	left: 40px;
@@ -467,7 +509,7 @@ html.active {
 	flex-wrap: wrap;
 }
 
-.slide__items.active {
+html.active .slide__items {
 	display: flex;
 }
 

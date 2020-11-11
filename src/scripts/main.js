@@ -70,5 +70,5 @@ $(document).on("click", ".banner__play svg, .banner-top__btn", function (e) {
 	e.preventDefault();
 	$("html, body").scrollTop(0);
 	$("html").addClass("active");
-	$(".slide__items").addClass("active");
+	// $(".slide__items").addClass("active");
 });
